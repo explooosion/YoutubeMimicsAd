@@ -1,8 +1,7 @@
 # YoutubeMimicsAd
-A website that mimics Youtube's advertising features.
-+ Youtube
-+ Advertising
-+ Academic use
+A website that mimics Youtube's advertising features.  
+
+_web for academic purposes_
 
 ## Ad Format
 
