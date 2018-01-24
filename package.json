@@ -1,7 +1,6 @@
 {
-  "name": "koa-deploy",
-  "version": "2.2.7",
-  "description": "Template for koa2",
+  "name": "youtube-mimics-ad",
+  "version": "0.0.1",
   "main": "start.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require babel-polyfill",
@@ -10,13 +9,7 @@
     "stop": "pm2 kill"
   },
   "author": "Robby",
-  "repository": "koa-deploy",
-  "keywords": [
-    "koa",
-    "koa2",
-    "template"
-  ],
-  "license": "MIT",
+  "repository": "YoutubeMimicsAd",
   "dependencies": {
     "ejs": "^2.5.7",
     "koa": "^2.4.1",
@@ -54,5 +47,5 @@
   "engines": {
     "node": ">= 6.0.0"
   },
-  "homepage": "https://github.com/explooosion/koa-deploy"
+  "homepage": "https://github.com/explooosion/YoutubeMimicsAd"
 }
