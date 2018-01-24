@@ -3,6 +3,6 @@ import checkauth from './check';
 
 export default function middleware() {
     return compose([
-        checkauth()
+        // checkauth()
     ])
 }

@@ -3,6 +3,8 @@ A website that mimics Youtube's advertising features.
 
 _web for academic purposes_ 🏤 
 
++ example. [link](https://www.youtube.com/watch?v=_gzPeXDhRNQ)
+
 ## Ad Format
 
 #### 廣告種類
@@ -17,6 +19,5 @@ _web for academic purposes_ 🏤
 | 重疊廣告     |  內   |  下   |  X   |  X   |  30   |
 | 贊助商資訊卡   |  內   |  右   |  X   |  O   |  30   |
 | 可略過的影片廣告 |  內   |  中   |  O   |  O   |  30   |
-
 
 

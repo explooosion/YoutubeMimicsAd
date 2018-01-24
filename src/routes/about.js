@@ -4,11 +4,7 @@ const router = new Router();
 
 router.get('/', async (ctx, next) => {
     ctx.body = {
-<<<<<<< HEAD
         status: 'about home'
-=======
-        'status': 'about home'
->>>>>>> cabc11fef112e5caf377cbed453763eee983062d
     }
 })
 

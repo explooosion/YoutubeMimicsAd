@@ -21,9 +21,8 @@ app.use(bodyParser());
 app.use(mount('/', convert(serve(`${__dirname}/public/`))));
 
 app.use(views(`${__dirname}/view/`, {
-    // extension: 'ejs'
-    // extension: 'pug'
-    extension: 'html' // use Angular4
+    extension: 'ejs'
+    // extension: 'pug' 
 }));
 
 app.use(middleware())
