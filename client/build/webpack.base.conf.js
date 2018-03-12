@@ -3,10 +3,11 @@ var merge = require('webpack-merge')
 var webpack = require('webpack')
 var config = require('../config')
 var utils = require('./utils')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -19,9 +20,8 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: isDev
-      ? config.dev.assetsPublicPath
-      : config.build.assetsPublicPath
+    publicPath: isDev ?
+      config.dev.assetsPublicPath : config.build.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.json'],
@@ -30,8 +30,7 @@ module.exports = {
     }
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js/,
         loader: 'eslint-loader',
         enforce: 'pre',
@@ -46,8 +45,8 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
-        test: /\.pug$/,
-        loader: 'pug-loader',
+        test: /\.ejs$/,
+        loader: 'ejs-compiled-loader',
         options: {
           root: resolve('src/views'),
           pretty: true
@@ -90,8 +89,11 @@ module.exports = {
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default'],
       // In case you imported plugins individually, you must also require them here:
-      Util: "exports-loader?Util!bootstrap/js/dist/util",
-      Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown"
-    })
+      Util: 'exports-loader?Util!bootstrap/js/dist/util',
+      Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
+    }),
+    // new webpack.ProvidePlugin({
+    //   '_': '_'
+    // })
   ]
 }
