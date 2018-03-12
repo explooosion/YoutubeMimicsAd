@@ -1,31 +1,45 @@
-# Webpack Frontend Starterkit
+# Webpack Simple Starter
+A simple webpack starter without framework (Like Vue, React, Angular, etc.). This project is inspired from [**vue-cli webpack project**](https://github.com/vuejs/vue-cli#vue-build)
 
-A lightweight foundation for your next webpack based frontend project.
-
-
-### Installation
-
-```
-npm install
+## Getting Started
+First, install the modules that the project needs.
+```bash
+$ npm install
 ```
 
-### Start Dev Server 
-
-```
-npm run dev
-```
-
-### Build Prod Version
-
-```
-npm run build
+Now, let's start developing.
+```bash
+$ npm run dev
 ```
 
-### Features:
+Finally development process done. Let's export for production.
+```bash
+$ npm run build
+```
 
-* ES6 Support via [babel-loader](https://github.com/babel/babel-loader)
-* SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-* Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-* Hot Module Replacement
+That's it!. Files are ready to under the `dist/` directory for production.
 
-When you run `npm run build` we use the [extract-text-webpack-plugin](https://github.com/webpack/extract-text-webpack-plugin) to move the css to a separate file and included in the head of your `index.html`, so that the styles are applied before any javascript gets loaded. We disabled this function for the dev version, because the loader doesn't support hot module replacement.
+## What's in this project?
+
+### Directories
+There are four main directories in project. This directories like below:
+```
+build/		# Webpack configurations
+config/		# Dev and prod configurations
+src/ 		# Project development files
+|_ scripts/	# Javascript files
+|_ styles/	# Style files (scss)
+|_ views/	# HTML templates (pug)
+static/		# Static files (Like fonts, images)
+```
+
+### Used Frameworks
+- Bootstrap and depended javascript frameworks like jquery. (Client)
+- Babel.js for ES6 compile
+- Sass for CSS
+- Pug for HTML template
+
+Also, this project is supporting hot reload and include **eslint**
+
+## License
+This project is under the MIT license.
