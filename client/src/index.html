@@ -9,6 +9,7 @@
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
     <meta name="format-detection" content="telephone=no">
+    <script src="./csi.js"></script>
     <style>
         html,
         body {
@@ -20,8 +21,14 @@
 
 <body>
 
-    <h1>Webpack ES6 Kit</h1>
-    <div id="content"></div>
+    <div class="app">
+        <div data-include="header.html"></div>
+        <div class="container">
+            <div class="content">
+            </div>
+            <div class="list"></div>
+        </div>
+    </div>
     <!-- uncomment the line bellow for cordova feature -->
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
 </body>
