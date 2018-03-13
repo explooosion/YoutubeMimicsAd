@@ -1,3 +1,10 @@
 @import "~bootstrap/scss/functions";
-@import "config/variables";
 @import "~bootstrap/scss/bootstrap";
+@import "config/variables";
+@import "config/overwrite";
+@import "helper/header.scss";
+body,
+.app {
+    margin: 0;
+    padding: 0;
+}

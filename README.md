@@ -3,7 +3,7 @@ A website that mimics Youtube's advertising features.
 
 _web for academic purposes_ 🏤 
 
-+ example. [link](https://www.youtube.com/watch?v=_gzPeXDhRNQ)
++ example. [link](https://www.youtube.com/watch?v=rCOjaIQOG90)
 
 ## Ad Format
 

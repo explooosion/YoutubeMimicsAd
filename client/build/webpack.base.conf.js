@@ -92,8 +92,8 @@ module.exports = {
       Util: 'exports-loader?Util!bootstrap/js/dist/util',
       Dropdown: 'exports-loader?Dropdown!bootstrap/js/dist/dropdown'
     }),
-    // new webpack.ProvidePlugin({
-    //   '_': '_'
-    // })
+    new webpack.ProvidePlugin({
+      '_': '_'
+    })
   ]
 }
