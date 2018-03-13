@@ -10,9 +10,14 @@
         margin-top: 10px;
         font-size: 14px;
         font-weight: bold;
+        svg {
+            margin-left: 6px;
+            font-size: 8px;
+            color: #888;
+        }
     }
     .video-date {
         font-size: 14px;
-        color: #666;
+        color: #444;
     }
 }
