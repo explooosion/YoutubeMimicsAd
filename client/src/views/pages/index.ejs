@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include src/views/shared/head -%>
-
-    <body>
-        <div class="app">
-            <%- include src/views/components/header -%>
-                <div class="container mt-4">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <%- include src/views/components/video -%>
-                                <hr>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                    </div>
+<body>
+    <div class="app">
+        <%- include src/views/components/header -%>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <%- include src/views/components/video -%>
+                    <hr>
+                    <%- include src/views/components/video-info -%>
                 </div>
+                <div class="col-md-4">
+                </div>
+            </div>
         </div>
-    </body>
-    <%- include src/views/shared/footer -%>
+    </div>
+</body>
+<%- include src/views/shared/footer -%>
 
 </html>
