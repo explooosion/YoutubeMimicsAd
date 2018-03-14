@@ -1,12 +1,16 @@
 import videojs from 'video.js'
 import Data from './Data'
+import Ad from './Ad'
 
 export default class Video {
     constructor(data) {
+
+        this.ad = new Ad()
+
         this.data = data
 
         /** Object */
-        this.selector = document.querySelector('#selType')
+        this.selector = document.querySelector('.selType')
         this.selector.addEventListener('change', this.onChangeType.bind(this))
         this.btnSearch = document.querySelector('.btn-search')
         this.btnSearch.addEventListener('click', this.searchByUrl.bind(this))
@@ -72,6 +76,8 @@ export default class Video {
             this.video.src(`/static/video/${result.src}`)
             this.video.poster(`/static/img/poster/${result.poster}`)
             this.video.load()
+
+            this.data = result
         }
     }
 
@@ -89,11 +95,11 @@ export default class Video {
      */
     onEnded(event) {
         if (!this.isPlayVideo) {
-            this.isPlayVideo = true
             this.video.src(`/static/video/${this.data.src}`)
             this.video.load()
             this.video.currentTime(this.currentTime)
             this.video.play()
+            this.isPlayVideo = true
         }
     }
 
@@ -101,14 +107,25 @@ export default class Video {
      * 影片播放階段偵錯
      */
     playHandler() {
-        // clearTimeout(this.timer)
         if (this.isPlayVideo) {
             this.timer = setTimeout(() => {
                 const now = this.video.currentTime()
-                if (now > this.adTime && now < this.adTime + 5 && !this.adFlag) {
+                if (now > this.adTime && now < this.adTime + 1 && !this.adFlag) {
                     this.currentTime = now
                     this.adFlag = true
-                    this.playAd()
+
+                    switch (this.ad.type) {
+                        case 'display':
+                            break
+                        case 'overlay':
+                            this.ad.showAdOverlay(this.data)
+                            break
+                        case 'skippable':
+                            this.playAd()
+                            break
+                        case 'cards':
+                            break
+                    }
                 }
                 this.playHandler()
             }, 1)
@@ -120,7 +137,7 @@ export default class Video {
      */
     playAd() {
         this.isPlayVideo = false
-        this.video.src(`/static/video/ad/《裸睡美人》電影短版預告.mp4`)
+        this.video.src(`/static/video/ad/${this.data.ad.center.url}`)
         this.video.load()
         this.video.play()
     }
