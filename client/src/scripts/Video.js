@@ -1,6 +1,7 @@
 import videojs from 'video.js'
+import Data from './Data'
 
-export class AdBot {
+export default class Video {
     constructor(data) {
 
         /** Object */
@@ -10,7 +11,7 @@ export class AdBot {
         this.btnSearch.addEventListener('click', this.onSearchUrl.bind(this))
 
         /** Property */
-        this.onInitial(data[0])
+        this.onInitial(data)
     }
     onInitial(data) {
         this.selector.value = data.type
@@ -21,10 +22,13 @@ export class AdBot {
         this.owner = document.querySelector('.video-owner')
         this.owner.innerText = data.owner
 
-        this.date = document.querySelector('.video-date')
+        this.date = document.querySelector('.video-date span')
         this.date.innerText = data.date
 
-        this.avatar = document.querySelector('.avatar img')
+        this.views = document.querySelector('.video-views span')
+        this.views.innerText = data.views
+
+        this.avatar = document.querySelector('.video-avatar')
         this.avatar.setAttribute('src', `/static/img/avatar/${data.avatar}`)
 
         this.search = document.querySelector('.txt-search')
@@ -44,6 +48,7 @@ export class AdBot {
             this.title.innerText = result.title
             this.owner.innerText = result.owner
             this.date.innerText = result.date
+            this.views.innerText = result.views
             this.avatar.setAttribute('src', `/static/img/avatar/${result.avatar}`)
             this.search.value = result.url
             this.video.src(`/static/video/${result.src}`)

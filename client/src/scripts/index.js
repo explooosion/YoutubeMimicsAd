@@ -1,4 +1,4 @@
-import Data from 'Data'
-import AdBot from 'AdBot'
+import Data from './Data'
+import Video from './Video'
 
-const adbot = new AdBot(Data[0])
+const video = new Video(Data[0])
