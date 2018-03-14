@@ -16,4 +16,4 @@ yarn.lock
 *.sln
 
 # resource
-static/video
+static/video/*.mp4
