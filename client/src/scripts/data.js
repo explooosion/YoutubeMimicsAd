@@ -10,15 +10,15 @@ const Data = [{
     poster: 'sport.jpg',
     ad: {
         bottom: {
-            img: 'game-2.jpg',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'sport.jpg',
+            url: 'https://easm2018.com/'
         },
         center: {
             url: '勘履鞋評 _ Nike LeBron 13 初探.mp4'
         },
         right: {
-            img: 'game.gif',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'sport.gif',
+            url: 'https://itw01.com/VXXNENL.html'
         },
     }
 }, {
@@ -33,15 +33,15 @@ const Data = [{
     poster: 'travel.jpg',
     ad: {
         bottom: {
-            img: 'game.jpg',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'travel.jpg',
+            url: 'https://www.artisan.com.tw/exh/ExhMini.aspx?area_no=6&no=44&gclid=CjwKCAjws6jVBRBZEiwAkIfZ2vtpNhEGQOZv20BJU44GQR85RwTZSGxC2yQ5ihTokL75z6jLLI0ZBRoCSyQQAvD_BwE'
         },
         center: {
             url: '台灣熱賣實用汽車椅背皮革強勁收納袋.mp4'
         },
         right: {
-            img: 'game.gif',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'travel.gif',
+            url: 'http://www.e-japannavi.com'
         },
     }
 }, {
@@ -64,7 +64,7 @@ const Data = [{
         },
         right: {
             img: 'game.gif',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            url: 'http://tw.patch.beanfun.com/pubad/Maplestory/MS20180301_update/index.html'
         },
     }
 }, {
@@ -79,15 +79,15 @@ const Data = [{
     poster: 'makeups.jpg',
     ad: {
         bottom: {
-            img: 'game.jpg',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'makeup.jpg',
+            url: 'http://tw.stylekorean.com/'
         },
         center: {
             url: '【86小舖】把酸梅唇變水嫩Q彈啾咪唇_HANAKA 花戀肌 嘟嘟Q潤翹唇凍 草莓_薄荷_蘋果_蜜桃_玫瑰.mp4'
         },
         right: {
-            img: 'game.gif',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'makeup.gif',
+            url: 'http://goods.ruten.com.tw/item/show?21449907976323'
         },
     }
 }, {
@@ -102,15 +102,15 @@ const Data = [{
     poster: 'food.jpg',
     ad: {
         bottom: {
-            img: 'game.jpg',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'food.jpg',
+            url: 'http://www.tung-hakka.com/home.php'
         },
         center: {
             url: '可愛又色彩繽紛♫ LADUREE 的冰淇淋&雪酪｜CCHANNEL  美食.mp4'
         },
         right: {
-            img: 'game.gif',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'food.gif',
+            url: 'http://sports.sina.com.cn/others/fitness/2017-09-07/doc-ifykqmrw1999286.shtml'
         },
     }
 }, {
@@ -125,15 +125,15 @@ const Data = [{
     poster: 'movie.jpg',
     ad: {
         bottom: {
-            img: 'game.jpg',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'movie.jpg',
+            url: 'https://www.vscinemas.com.tw/'
         },
         center: {
             url: '《裸睡美人》電影短版預告.mp4'
         },
         right: {
-            img: 'game.gif',
-            url: 'https://www.gunsrush.com/gunsrush/guide/'
+            img: 'movie.jpg',
+            url: 'https://www.youtube.com/watch?v=13esboQlNUY'
         },
     }
 }]

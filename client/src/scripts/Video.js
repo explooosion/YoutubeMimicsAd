@@ -21,7 +21,7 @@ export default class Video {
         this.currentTime = 0
         this.timer = null
         this.adFlag = false
-        this.adTime = 180
+        this.adTime = [180, 420]
     }
 
     /**
@@ -95,11 +95,13 @@ export default class Video {
      */
     onEnded(event) {
         if (!this.isPlayVideo) {
-            this.video.src(`/static/video/${this.data.src}`)
-            this.video.load()
-            this.video.currentTime(this.currentTime)
-            this.video.play()
-            this.isPlayVideo = true
+            if (this.ad.type === 'skippable') {
+                this.video.src(`/static/video/${this.data.src}`)
+                this.video.load()
+                this.video.currentTime(this.currentTime + 1)
+                this.video.play()
+                this.isPlayVideo = true
+            }
         }
     }
 
@@ -110,20 +112,28 @@ export default class Video {
         if (this.isPlayVideo) {
             this.timer = setTimeout(() => {
                 const now = this.video.currentTime()
-                if (now > this.adTime && now < this.adTime + 1 && !this.adFlag) {
+
+                const time1 = now > this.adTime[0] && now < this.adTime[0] + 1 && !this.adFlag
+                const time2 = now > this.adTime[1] && now < this.adTime[1] + 1 && !this.adFlag
+
+                if (time1 === true || time2 === true) {
                     this.currentTime = now
                     this.adFlag = true
 
                     switch (this.ad.type) {
                         case 'display':
+                            this.ad.showAdDisplay(this)
                             break
                         case 'overlay':
-                            this.ad.showAdOverlay(this.data)
+                            this.ad.showAdOverlay(this)
                             break
                         case 'skippable':
-                            this.playAd()
+                            this.playAd(this.data)
                             break
                         case 'cards':
+                            break
+                        default:
+                            console.log('no case', this.ad.type)
                             break
                     }
                 }
@@ -135,11 +145,14 @@ export default class Video {
     /**
      * 播放廣告
      */
-    playAd() {
+    playAd(data) {
         this.isPlayVideo = false
-        this.video.src(`/static/video/ad/${this.data.ad.center.url}`)
+        this.adFlag = false
+        this.video.src(`/static/video/ad/${data.ad.center.url}`)
         this.video.load()
         this.video.play()
+
+        this.ad.showAdSkipBefore(this)
     }
 
     /**

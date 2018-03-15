@@ -3,9 +3,11 @@
 @import "config/variables";
 @import "config/common";
 @import "config/overwrite";
+@import "helper/ad.scss";
 @import "helper/header.scss";
 @import "helper/video.scss";
 @import "helper/video-info.scss";
+@import "helper/video-list.scss";
 body,
 .app {
     margin: 0;
