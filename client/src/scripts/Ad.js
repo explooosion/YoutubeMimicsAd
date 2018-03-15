@@ -29,8 +29,39 @@ export default class Ad {
         this.adSkipAfter = document.querySelector('.ad-skip-after')
 
         /** 贊助商資訊卡 */
+        this.adCard = document.querySelector('.ad-card')
+        this.adCardCross = document.querySelector('.ad-card-cross')
+        this.adCardCross.addEventListener('click', this.onCloseAdCard.bind(this))
+        this.adCardItem = document.getElementsByClassName('ad-card-item')
+        this.adCardItem = [this.adCardItem[0], this.adCardItem[1], this.adCardItem[2]]
+        this.adCardImg = document.getElementsByClassName('ad-card-img')
+        this.adCardImg = [this.adCardImg[0], this.adCardImg[1], this.adCardImg[2]]
+        this.adCardTitle = document.getElementsByClassName('ad-card-title')
+        this.adCardTitle = [this.adCardTitle[0], this.adCardTitle[1], this.adCardTitle[2]]
+        this.adCardOwner = document.getElementsByClassName('ad-card-owner')
+        this.adCardOwner = [this.adCardOwner[0], this.adCardOwner[1], this.adCardOwner[2]]
     }
 
+    onCloseAdCard(event) {
+        this.adCard.classList.add('close')
+    }
+    showAdCard(obj) {
+        this.adCard.classList.remove('close')
+        this.adCardItem.forEach((item, index) => {
+            item.setAttribute('href', obj.data.ad.card[index].url)
+        })
+        this.adCardImg.forEach((item, index) => {
+            item.style.backgroundImage = `url('${obj.data.ad.card[index].img}')`
+        })
+        this.adCardTitle.forEach((item, index) => {
+            item.innerText = obj.data.ad.card[index].title
+        })
+        this.adCardOwner.forEach((item, index) => {
+            item.innerText = obj.data.ad.card[index].owner
+        })
+        obj.isPlayVideo = true
+        obj.adFlag = false
+    }
     onCloseAdDisplay(event) {
         this.adDisplay.style.display = 'none'
     }

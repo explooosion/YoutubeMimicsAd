@@ -90,3 +90,80 @@
         cursor: pointer;
     }
 }
+
+.ad-card {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 180px;
+    height: 480px;
+    color: #eee;
+    background-color: rgba(0, 0, 0, .4);
+    transition: all .4s ease-in;
+    &.close {
+        opacity: 0;
+        right: -180px;
+    }
+    .ad-card-head {
+        padding: 4px 10px;
+        .ad-card-cross {
+            opacity: .4;
+            float: right;
+            line-height: 28px;
+            cursor: pointer;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+    .ad-card-body {
+        overflow-y: auto;
+        position: relative;
+        padding-top: 10px;
+        height: 440px;
+        &::-webkit-scrollbar {
+            width: 0.6em;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #424242;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #666;
+        }
+        .ad-card-item {
+            display: block;
+            margin: 0 auto 15px;
+            width: 85%;
+            color: #fff;
+            background-color: #fff;
+            &:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+            .ad-card-img {
+                width: 100%;
+                height: 90px;
+                background-position: center center;
+                &[data-src="1"] {
+                    background-image: url('https://i.ytimg.com/an_webp/LOII0RU1fw8/mqdefault_6s.webp?du=3000&sqp=CPPpqdUF&rs=AOn4CLDaKOx5XROuxgwIPrKAfCoXDgZGiw');
+                }
+                &[data-src="2"] {
+                    background-image: url('https://i.ytimg.com/an_webp/EDf91kryxvQ/mqdefault_6s.webp?du=3000&sqp=CNzoqdUF&rs=AOn4CLBgplY_DvVqnTuwYaicIwRJIlOX7g');
+                }
+                &[data-src="3"] {
+                    background-image: url('https://i.ytimg.com/an_webp/otmasin3vvg/mqdefault_6s.webp?du=3000&sqp=CPifqtUF&rs=AOn4CLDSW-Xub2_nJ1hoddJpl8-UjA9guA');
+                }
+            }
+            .ad-card-title {
+                padding: 4px 8px 0;
+                font-size: 12px;
+                color: #222;
+            }
+            .ad-card-owner {
+                padding: 2px 8px 4px;
+                font-size: 12px;
+                color: #444;
+            }
+        }
+    }
+}

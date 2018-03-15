@@ -131,6 +131,7 @@ export default class Video {
                             this.playAd(this.data)
                             break
                         case 'cards':
+                            this.ad.showAdCard(this)
                             break
                         default:
                             console.log('no case', this.ad.type)
