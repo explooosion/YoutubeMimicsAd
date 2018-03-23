@@ -22,6 +22,8 @@ export default class Video {
         this.timer = null
         this.adFlag = false
         this.adTime = [60, 180, 360, 540]
+
+        localStorage.clear()
     }
 
     /**
@@ -86,6 +88,10 @@ export default class Video {
      * @param {object} event
      */
     onPlay(event) {
+        if (!localStorage.getItem('start')) {
+            localStorage.setItem('start', new Date())
+            console.log(localStorage.getItem('start'))
+        }
         this.playHandler()
     }
 
