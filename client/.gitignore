@@ -14,6 +14,3 @@ yarn.lock
 *.ntvs*
 *.njsproj
 *.sln
-
-# resource
-static/video/*.mp4
