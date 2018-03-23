@@ -21,7 +21,7 @@ export default class Video {
         this.currentTime = 0
         this.timer = null
         this.adFlag = false
-        this.adTime = [180, 420]
+        this.adTime = [60, 180, 360, 540]
     }
 
     /**
@@ -115,8 +115,10 @@ export default class Video {
 
                 const time1 = now > this.adTime[0] && now < this.adTime[0] + 1 && !this.adFlag
                 const time2 = now > this.adTime[1] && now < this.adTime[1] + 1 && !this.adFlag
+                const time3 = now > this.adTime[2] && now < this.adTime[2] + 1 && !this.adFlag
+                const time4 = now > this.adTime[3] && now < this.adTime[3] + 1 && !this.adFlag
 
-                if (time1 === true || time2 === true) {
+                if (time1 === true || time2 === true || time3 === true || time4 === true) {
                     this.currentTime = now
                     this.adFlag = true
 
