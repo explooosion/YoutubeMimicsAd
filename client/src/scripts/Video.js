@@ -90,7 +90,7 @@ export default class Video {
     onPlay(event) {
         if (!localStorage.getItem('start')) {
             localStorage.setItem('start', new Date())
-            console.log(localStorage.getItem('start'))
+            console.log('Start TIme:', localStorage.getItem('start'))
         }
         this.playHandler()
     }
