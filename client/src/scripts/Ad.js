@@ -97,7 +97,7 @@ export default class Ad {
         this.adSkipBefore.style.display = 'none'
         this.adSkipAfter.style.display = 'block'
         this.adSkipAfter.addEventListener('click', () => {
-            obj.onEnded()
+            obj.onEnded(this.adSkipAfter)
             this.adSkipAfter.style.display = 'none'
             this.adSkipAfter.removeEventListener('click', null, false)
         })

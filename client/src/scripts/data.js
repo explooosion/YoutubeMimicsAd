@@ -92,11 +92,11 @@ const Data = [{
             url: 'https://www.gunsrush.com/gunsrush/guide/'
         },
         center: {
-            url: '【新楓之谷】聯盟戰地.mp4'
+            url: 'Monster Hunter_ World 超好笑的遊戲廣告！.mp4'
         },
         right: {
             img: 'game.gif',
-            url: 'http://tw.patch.beanfun.com/pubad/Maplestory/MS20180301_update/index.html'
+            url: 'http://tw.patch.beanfun.com/pubad/Maplestory/MS20180411_update/index.html'
         },
         card: [{
             img: 'https://i.ytimg.com/an_webp/cu8RSrJd-vM/mqdefault_6s.webp?du=3000&sqp=CKeYqtUF&rs=AOn4CLCoUu9uyXXQWNaIwJYmbWeHsSX4rA',
